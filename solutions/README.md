@@ -14,6 +14,6 @@ This page serves as the main reference point to navigate through my solutions. E
 
 | Problem Name | Platform | Tags | Difficulty |
 | :---: | :---: | :---: | :---: |
-| **[Bigsomma](./olinfo/bigsomma)** | Training Olinfo | `Extreme Optimization` | 🔴 4/5 |
+| **[Bigsomma](.olinfo/bigsomma (fast input))** | Training Olinfo | `Extreme Optimization` | 🔴 4/5 |
 
 ---
