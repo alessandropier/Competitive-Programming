@@ -9,13 +9,13 @@ The repository is organized into the following sections:
 ```
 ├── library/              
 │   └── README.md         # Theoretical notes, study, and implementations on the following concepts:
-│                            1. general-cpp/      # Notes on STDL, cpp Compiler, Code, etc.
-│                            2. strings/          # Notes on Strings, Chars, etc.
-│                            3. data-structures/  # Vectors, Maps, Segment Trees, Fenwick Trees, DSU, etc.
-│                            4. graph-theory/     # DFS/BFS, Shortest Path, MST, Flow, etc.
-│                            5. number-theory/    # Primes, Modular Arithmetic, Combinatorics
-│                            6. dp/               # Classic DP patterns and optimizations
-│                            7. geometry/         # Coordinates, Floating-point numbers, Polygons, etc.
+│                            general-cpp/      # Notes on STDL, cpp Compiler, Code, etc.
+│                            strings/          # Notes on Strings, Chars, etc.
+│                            data-structures/  # Vectors, Maps, Segment Trees, Fenwick Trees, DSU, etc.
+│                            graph-theory/     # DFS/BFS, Shortest Path, MST, Flow, etc.
+│                            number-theory/    # Primes, Modular Arithmetic, Combinatorics
+│                            dp/               # Classic DP patterns and optimizations
+│                            geometry/         # Coordinates, Floating-point numbers, Polygons, etc.
 ├── templates/            # Boilerplate code and fast I/O templates
 ├── solutions/            # Solutions to problems from various platforms
 │    ├── README.md        # Index of discussed solved problems
