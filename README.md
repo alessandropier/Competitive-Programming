@@ -46,14 +46,41 @@ This directory contains my accepted solutions to various problems.
 2. **For Practice**: Check the solutions/ folder to try out some new problems.
 3. **For Setup**: Use the templates/ folder to quickly set up some methods for new problems.
 
-## 🔗 Resources
+## 💻 Websites for Problems
 
 1. Codeforces
-2. LeetCode
-3. CP-Algorithms (Great reference for theory)
+2. Training Olinfo
+3. CSES
+4. LeetCode
+5. AtCoder
+6. Kattis
+7. CodeChef
+8. QOJ
 
-## 👤 Author
-**Alessandro Piergiovanni**
+## 🏅 Contests
+
+1. Codeforces **_(check the blog often because people share news about contests)_**\
+1.1 LeetCode, AtCoder, CodeChef **_(weekly / daily)_**
+2. Facebook Hacker Cup (**IMPORTANT**)
+3. ICPC **_(IMPORTANT - for Universities)_**
+4. Croatian Open Competition in Informatics **_(mirror)_**
+5. OIS - OII **_(Italy)_** / IOIS - IOI **_(international)_** **_(mirror)_**
+6. [QOJ](https://qoj.ac/) **_(mirrors of old competitions and is the engine for multiple contests such as the "Universal Cup")_**
+7. Yandex Algorithm (**IMPORTANT**)
+8. [Universal Cup](https://ucup.ac/) **_(IMPORTANT - for groups only - has a discord channel where people look for a team and have discussions)_**
+
+[Here](https://cphof.org/contests) is an updated list of the **past** contests all over the world.\
+List of the **upcoming** contests all over the world:
+1. [CLIST](https://clist.by/) _(might be helpful to sign-up here and list all your nicknames so every win shows next to your nick)_
+2. [CP Calendar](https://competitiveprogramming.info/calendar)
+
+## 🔗 Resources
+
+1. CP-Algorithms (Great reference for theory)
+
+## 👦 Author
+**Alessandro Piergiovanni**\
+_Computer Science graduate and Forbes Top Graduate_
 
 e-mail: alessandropiergiovanni001@gmail.com
 
