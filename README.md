@@ -24,6 +24,8 @@ The repository is organized into the following sections:
 └── README.md            # This file
 ```
 
+**Note**: The repository structure might change along the way _(e.g., by adding specific topic folders inside library/)_.
+
 # 📖 Sections Overview
 
 ## 💡 Library
@@ -56,6 +58,7 @@ This directory contains my accepted solutions to various problems.
 6. Kattis
 7. CodeChef
 8. QOJ
+9. [CSAcademy](https://csacademy.com/contest/archive) **_(old mirrors + useful teaching resourses)_**
 
 ## 🏅 Contests
 
@@ -76,7 +79,12 @@ List of the **upcoming** contests all over the world:
 
 ## 🔗 Resources
 
+Given the extensive knowledge and high-quality resources already available online regarding Competitive Programming, I want to optimize my time and keep my sanity intact; therefore, instead of writing exhaustive, deep-dive explanations for every topic, this repository will focus on my personal notes _(for all levels)_ and solutions, supplemented by curated references to existing external material.
+
+Here are some useful resourses:
+
 1. CP-Algorithms (Great reference for theory)
+2. USACO guide: https://usaco.guide/, specifically [here](https://usaco.guide/general/usaco-faq?lang=cpp#q-what-topics-do-i-need-to-know-for-each-of-the-usaco-divisions) in which there are topics for every level with in depth explanations
 
 ## 👦 Author
 **Alessandro Piergiovanni**\
