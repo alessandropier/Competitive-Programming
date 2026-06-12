@@ -1,6 +1,7 @@
 # Bigsomma (fast input)
 
-_Link to the Training Olinfo problem [here](https://training.olinfo.it/task/bigsomma)._
+_Link to the Training Olinfo problem [here](https://training.olinfo.it/task/bigsomma)._\
+_Source code [here](https://github.com/alessandropier/Competitive-Programming/blob/main/solutions/olinfo/bigsomma%20(fast%20input)/bigsomma.cpp)._
 
 As shown in the attached PDF file in the repository and on the official website, the solution requires a simple sum of N numbers.
 

@@ -1,67 +1,66 @@
 #include <stdio.h>
 
-const int BUFFER_SIZE = 64 * 1024; // 64 KB: coincide con la dimensione delle cache L1/L2
-char in_buf[BUFFER_SIZE]; //buffer che contiene tutti i dati
+const int BUFFER_SIZE = 64 * 1024; // 64 KB: good for L1/L2 cache
+char in_buf[BUFFER_SIZE]; // data buffer, size of 64 KB
 
 long long somma(FILE *f)
 {
-	// 1. CARICAMENTO DEL FILE IN RAM
-    // Legge tutto il file e lo inserisce in in_buf
-    // dimensione del buffer attuale
-    int size = fread(in_buf, 1, BUFFER_SIZE, f); // se size == 0 --> EOF raggiunto
+	// 1. LOADING THE FILE INTO RAM
+    // Read the first chunk of the file and put it into in_buf
+    // size stores the current number of bytes read
+    int size = fread(in_buf, 1, BUFFER_SIZE, f); // if size == 0 --> EOF reached
     
-    // Puntatore per scorrere in_buf
+    // Pointer to iterate through in_buf
     char *ptr = in_buf;
-    // Puntatore che segna la fine dei dati validi nel buffer
+    // Guard pointer marking the end of valid data in the buffer
     char *end_ptr = in_buf + size;
     
-    // 2. PARSING DI N 
-	// solo N cosi dopo posso scorrere i numeri
+    // 2. N PARSING 
+	// Parsing N alone to focus exclusively on numbers later
     int N = 0;
     
-    // Converte i caratteri di N in numero
+    // Convert text characters of N into an integer
     while(*ptr != '\n')
     {
     	N = N * 10 + (*ptr - '0');
-    	// ogni volta che leggiamo una cifra spostiamo il numero letto
-		// finora a sinistra e per farlo moltiplichiamo per 10.
-    	// Dopo sommiamo la cifra letta ora da cui sottraggo '0' per
-    	// ottenerla
+    	// Every time a digit is read, we shift the accumulated number
+        // to the left by multiplying it by 10. Then we add the new
+        // digit, subtracting '0' (ASCII offset) to get its numerical value.
     	
     	ptr++;
 	}
 	
-	// consumiamo il '\n'
+	// consuming the '\n'
 	ptr++;
     
 	long long totale = 0;
 	int val;
 	int segno;
 	
-	// 3. CICLO PARSING DEI NUMERI + SOMMA e GESTIONE NEGATIVI
+	// 3. PARSING CYCLE OF NUMBERS + SUM and SIGN HANDLING
 	do
 	{	
-		// Unico controllo: vedo se ci sono abbastanza caratteri per terminare 1 ciclo
-		if(__builtin_expect(ptr > end_ptr - (1 << 5), 0)) // se i caratteri mancanti sono meno di 32 rileggiamo
+		// Safety check: verify if there are enough characters left to safely parse a full number
+		if(__builtin_expect(ptr > end_ptr - (1 << 5), 0)) // If less than 32 characters -> refill buffer
 		{
-			// caratteri rimasti nel buffer ancora da leggere
+			// Calculate the number of unread characters left at the right edge of the buffer
 			int rimasti_in_buf = end_ptr - ptr;
 
-			// salvare i caratteri rimasti nel buffer
+			// Shift the remaining unread characters to the very beginning of the buffer
 			for(int i = 0; i < rimasti_in_buf; i++)
 				in_buf[i] = ptr[i];
 			
-			// rileggere il buffer SOLO del restante per completarlo
-			size = fread(in_buf + rimasti_in_buf, 1, BUFFER_SIZE - rimasti_in_buf, f); // rileggo il buffer
+			// Single RAM read to fill ONLY the remaining unused part of the 64 KB buffer
+			size = fread(in_buf + rimasti_in_buf, 1, BUFFER_SIZE - rimasti_in_buf, f); // reading the buffer
 			size += rimasti_in_buf;
 			
 			ptr = in_buf;
-			end_ptr = in_buf + size; // aggiorniamo la fine
+			end_ptr = in_buf + size; // Update the boundary pointer
 			
-			if(size == 0) return totale; // file finito
+			if(size == 0) return totale; // EOF reached
 		}
 		
-		// Gestione del segno meno per i numeri negativi
+		// Negative numbers handling
 		segno = 1;
 		if(*ptr == '-')
 		{
@@ -70,8 +69,8 @@ long long somma(FILE *f)
 			ptr++;
 		}
 
-		// Conversione rapida da testo a numero long long
-		// (come sopra)
+		// Text-to-number translation
+		// (as above)
 		val = 0; 
 		while(*ptr >= '0')
 	    {
@@ -80,12 +79,11 @@ long long somma(FILE *f)
 	    	ptr++;
 		}
 		
-		// Applica il segno meno se necessario e accumula il risultato nel totale
+		// Apply the sign and accumulate the result into the total
 		totale += (long long)val * segno;
 		
-		// Passaggio al numero successivo
-		while(*ptr <= ' ')
-			ptr++;
+		// Skip the whitespace to get to the next number
+		ptr++;
 		
 		N--;
 	}
