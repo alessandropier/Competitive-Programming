@@ -75,7 +75,7 @@ Standard string conversion functions are bypassed in favor of a specialized arit
 * **Text-to-integer translation:** The text-to-integer translation executes directly on the character stream through raw base-10 arithmetic (`val = val * 10 + (*ptr - '0');`). This avoids the high abstraction overhead of `std::stoi` or `atoi`, consuming only 2 to 3 CPU clock cycles per processed digit.
 
 ### 3. The Safety Mechanism & Ahead-of-Time Buffer Refill
-The most advanced part of the algorithm is the preventive buffer reload loop, which acts as a safety measure before a number is cut in half at the edge of the buffer:
+The most important part of the algorithm is the preventive buffer reload loop, which acts as a safety measure before a number is cut in half at the edge of the buffer:
 * **Why 32 Characters?** A single integer under the specified problem constraints can be up to 9–10 characters long (including the minus sign). By checking if we have fewer than 32 characters left (`ptr > end_ptr - 32`), we ensure there is *always* enough contiguous string space to fully parse the next number without facing an abrupt End-of-Buffer error. _(note: here 32 is not the only number that works. every number bigger than the maximum digits of numbers would work. For example: 11 would work just fine because 11 > 10)_
 * **Branch Prediction via `__builtin_expect`:** Refilling the buffer occurs very rarely (only once every 64 KB of processed text). The compiler macro `__builtin_expect(..., 0)` forces the CPU to optimize for the _most common path_ (the parsing loop), treating the reload branch as highly unlikely. This prevents the CPU pipeline from stalling and guarantees steady throughput.
 * **The Refill Logic:** When the threshold is triggered, the few remaining characters at the end of the buffer are shifted to the very beginning (`in_buf[i] = ptr[i]`). Then, a single `fread` requests only the missing bytes from the Operating System to fill the 64 KB buffer, resetting `ptr` and `end_ptr`.
@@ -84,5 +84,5 @@ The most advanced part of the algorithm is the preventive buffer reload loop, wh
 ## Key Optimizations:
 * **Cache-Aligned Buffer:** By restricting the buffer to 64 KB, we prevent the data from spilling into the slower main RAM during processing.
 * **Locale-Free Arithmetic Parsing:** Instead of using heavy standard libraries, text characters are converted directly into integers using basic math operations (`val * 10 + (...)`). This takes only 2-3 CPU cycles per digit.
-* **Branch Prediction Optimization:** The `__builtin_expect` macro informs the compiler that refilling the buffer is a rare event. The CPU pre-fetches the main processing path, eliminating pipeline stalls.
-* **On-the-Fly Accumulation:** Numbers are summed instantly as they are parsed, achieving an optimal $\mathcal{O}(1)$ Space Complexity.
+* **Branch Prediction Optimization:** The `__builtin_expect` macro informs the compiler that refilling the buffer _(entering the if branch)_ is a rare event. The CPU pre-fetches the main processing path _(outside the if)_, eliminating pipeline stalls.
+* **Quick Sum:** Numbers are summed instantly as they are parsed, achieving an optimal $\mathcal{O}(1)$ Space Complexity.

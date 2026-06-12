@@ -6,7 +6,7 @@ char in_buf[BUFFER_SIZE]; // data buffer, size of 64 KB
 long long somma(FILE *f)
 {
 	// 1. LOADING THE FILE INTO RAM
-    // Read the first chunk of the file and put it into in_buf
+    // Read the first chunk of the file and put it into in_buf to bypass continous RAM requests
     // size stores the current number of bytes read
     int size = fread(in_buf, 1, BUFFER_SIZE, f); // if size == 0 --> EOF reached
     
@@ -85,6 +85,7 @@ long long somma(FILE *f)
 		// Skip the whitespace to get to the next number
 		ptr++;
 		
+		// Decrease the remaining number of integers left
 		N--;
 	}
 	while(N > 0);
