@@ -11,9 +11,13 @@ This problem is very interesting because the logic is simple, but the real chall
 
 The limits are:
 
+<div align="center">
+
 Time Limit | Memory Limit |
 :---: | :---: | 
 1 second | 256 MB |
+
+</div>
 
 The real challenge is making the code run in under 1 second, especially since the numbers are a lot and quite large.
 
