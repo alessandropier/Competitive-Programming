@@ -81,10 +81,17 @@ List of the **upcoming** contests all over the world:
 
 Given the extensive knowledge and high-quality resources already available online regarding Competitive Programming, I want to optimize my time and keep my sanity intact; therefore, instead of writing exhaustive, deep-dive explanations for every topic, this repository will focus on my personal notes _(for all levels)_ and solutions, supplemented by curated references to existing external material.
 
-Here are some useful resourses:
+Here are some useful resourses: _(** used for very high level material)_
 
-1. CP-Algorithms (Great reference for theory)
-2. USACO guide: https://usaco.guide/, specifically [here](https://usaco.guide/general/usaco-faq?lang=cpp#q-what-topics-do-i-need-to-know-for-each-of-the-usaco-divisions) in which there are topics for every level with in depth explanations
+1. CP-Algorithms (good reference for theory) [here](https://cp-algorithms.com/)
+2. ** USACO guide: https://usaco.guide/, specifically [here](https://usaco.guide/general/usaco-faq?lang=cpp#q-what-topics-do-i-need-to-know-for-each-of-the-usaco-divisions) in which there are topics for every level with in depth explanations
+
+3. ** Colin Galen "Topic Streams" YouTube Playlist [here](https://www.youtube.com/playlist?list=PLDjGkpToBsYCaRoQ-_S5MRxYMuKgHD62w): very in depth explanation of multiple topics _(along with his other videos)_
+4. Errichto "Edu" YouTube Playlist [here](https://www.youtube.com/playlist?list=PLl0KD3g-oDOEbtmoKT5UWZ-0_JbyLnHPZ): quick videos (around 20 min each) about multiple topics
+5. ** Olimpiadi Italiane di Informatica YouTube Playlist [here](https://www.youtube.com/watch?v=8sr5Of-Bb1s&list=PLO4y9a8lTpK1voZwy4xkhFX3_y1GRDO8p): every topic explained in Italian by qualified teachers
+
+6. ACM-ICPC-Preparation GitHub repo [here](https://github.com/BedirT/ACM-ICPC-Preparation): contains every topic from basic level to expert along with resources, youtube videos, web pages etc.
+7. ACM-ICPC-Algorithms GitHub repo [here](https://github.com/matthewsamuel95/ACM-ICPC-Algorithms): a lot of topics with **code implementation**
 
 ## 👦 Author
 **Alessandro Piergiovanni**\
