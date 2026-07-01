@@ -2,7 +2,7 @@
 1. [Big O Notation](#1-big-o-notation)
     - 1.1 [list of notations](#11-list-of-notations)
     - 1.2 [choosing the approach based on input size](#12-choosing-the-approach-based-on-input-size)
-    - 1.3 [how to calculate no. of elements, time constaint based on complexity](#13-how-to-calculate-no-of-elements-time-constaint-based-on-complexity)
+    - 1.3 [how to calculate no. of elements based on time constaint and complexity](#13-how-to-calculate-no-of-elements-based-on-time-constaint-and-complexity)
 2. [Next Topic](#2-next-topic)
 
 ---
@@ -26,7 +26,9 @@
 
 ### 1.2 Choosing the Approach Based on Input Size
 
-Estimating the efficiency of a solution is one of the most common tricks used by programmers and in coding competitions. It's called **Target Run Time Analysis**. Modern computers perform about $10^8$ (100 million) operations per second in a single thread. Knowing that the maximum allowed execution time for an algorithm is usually **_1 or 2 seconds_**, you can look at the maximum input size ($n$) and immediately understand the maximum complexity you can afford.
+Estimating the efficiency of a solution is one of the most common tricks used by programmers and in coding competitions. It's called **Target Run Time Analysis**. Modern computers perform about $10^8$ (100 million) [sometimes up to $10^{9}$, 1 billion] operations per second in a single thread. 
+
+Knowing that the maximum allowed execution time for an algorithm is usually **_1 or 2 seconds_**, you can look at the maximum input size ($n$) and immediately understand the maximum complexity you can afford.
 
 | Input Size ($n$) | Maximum Allowable Complexity | Typical Algorithms / Approaches |
 | :--- | :--- | :--- |
@@ -40,9 +42,9 @@ Estimating the efficiency of a solution is one of the most common tricks used by
 
 Therefore, looking at the input size you can instantly determine which solutions are worth considering.
 
-> **note**: this table is created considering the TLE of 1 second. If we consider a bigger Time Constaint (2, 4, 10 seconds) the table would change slightly.
+> **note**: this table is created considering the TLE of 1 second. If we consider a bigger Time Constaint (2, 4, 10 seconds) the table would change slightly. This could be used as a guide when solving problems and need to be adjusted based on how big $n$ is and the time constraint.
 
-### 1.3 How to Calculate no. of Elements, Time Constaint based on Complexity
+### 1.3 How to Calculate no. of Elements based on Time Constaint and Complexity
 
 In the book _"Introduction to Algorithms"_ at page 15 there is this table:
 <div align="center">
@@ -102,5 +104,7 @@ Now, we can use the $t$ value calculated in the first step and the $n$ _resoluti
 | $n!$ | Trial and Error | $9! \le 10^6 < 10!$ | $9$ |
 
 To find the solutions for the other time constaint we follow the same logic.
+
+> **note**: the big O notation is a theoretical way to figure how a solution behaves as $n$ grows. It is not meant to determine precisely the time a solution will need to complete, nor the precise size of $n$.
 
 ## 2. Next Topic
