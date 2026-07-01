@@ -2,7 +2,7 @@
 1. [Big O Notation](#1-big-o-notation)
     - 1.1 [list of notations](#11-list-of-notations)
     - 1.2 [choosing the approach based on input size](#12-choosing-the-approach-based-on-input-size)
-    - 1.3 [how to calculate no. of operations, time constaint based on complexity](#13-how-to-calculate-no-of-operations-time-constaint-based-on-complexity)
+    - 1.3 [how to calculate no. of elements, time constaint based on complexity](#13-how-to-calculate-no-of-elements-time-constaint-based-on-complexity)
 2. [Next Topic](#2-next-topic)
 
 ---
@@ -42,7 +42,7 @@ Therefore, looking at the input size you can instantly determine which solutions
 
 > **note**: this table is created considering the TLE of 1 second. If we consider a bigger Time Constaint (2, 4, 10 seconds) the table would change slightly.
 
-### 1.3 How to Calculate no. of Operations, Time Constaint based on Complexity
+### 1.3 How to Calculate no. of Elements, Time Constaint based on Complexity
 
 In the book _"Introduction to Algorithms"_ at page 15 there is this table:
 <div align="center">
