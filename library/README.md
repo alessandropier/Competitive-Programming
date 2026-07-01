@@ -45,12 +45,11 @@ Therefore, looking at the input size you can instantly determine which solutions
 ### 1.3 How to Calculate no. of Operations, Time Constaint based on Complexity
 
 In the book _"Introduction to Algorithms"_ at page 15 there is this table:
-<figure style="text-align: center;">
-  <img src="imgs/1.png" alt="Centered Image" width="500">
-  <figcaption style="font-style: italic; color: gray; margin-top: 8px;">
-    Time Complexity on the left and Time Constaint above
-  </figcaption>
-</figure>
+<div align="center">
+  <img src="imgs/1.png" alt="Time Complexity vs Time Constraint" width="500">
+  <br>
+  <sup><i>Time Complexity on the left and Time Constraint above</i></sup>
+</div>
 
 The goals is:
 
