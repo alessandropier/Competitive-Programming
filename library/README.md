@@ -68,7 +68,7 @@ First of all, let's convert the time constaints in microseconds:
 - 1 century: $100 \times 3.1536 \times 10^{13} = 3.1536 \times 10^{15}\ \mu s$
 
 ### Second Step
-Now, for each function $f(n)$ we find a way to solve it:
+Now, for each function $f(n)$ we find a way to solve it _for_ $n$:
 - For $\lg n$:\
 $\lg n = t \implies n = 2^t$
 - Per $\sqrt{n}$:\
@@ -88,7 +88,7 @@ $n! = t$. Here too, we proceed by trial and error, incrementing $n$ (e.g. $1!, 2
 
 ### Third Step (solution for 1 second)
 
-Now, we can use the $t$ value calculated in the first step and the $f(n)$ calculated in the second step to find the **maximum input size** $n$ that can be processed in **1 second** ($t = 10^6$ microseconds) for each running time function $f(n)$.
+Now, we can use the $t$ value calculated in the first step and the $n$ _resolution formula_ calculated in the second step to find the **maximum input size** $n$ that can be processed in **1 second** ($t = 10^6$ microseconds) for each running time function $f(n)$.
 
 | Function $f(n)$ | Resolution Formula | Calculation for 1 second ($t=10^6$) | Final Result (Maximum $n$) |
 | :--- | :--- | :--- | :--- |
