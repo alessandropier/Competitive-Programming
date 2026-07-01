@@ -2,6 +2,7 @@
 1. [Big O Notation](#1-big-o-notation)
     - 1.1 [list of notations](#11-list-of-notations)
     - 1.2 [choosing the approach based on input size](#12-choosing-the-approach-based-on-input-size)
+    - 1.3 [how to calculate no. of operations, time constaint based on complexity](#13-how-to-calculate-no-of-operations-time-constaint-based-on-complexity)
 2. [Next Topic](#2-next-topic)
 
 ---
@@ -25,7 +26,7 @@
 
 ### 1.2 Choosing the Approach Based on Input Size
 
-Estimating the efficiency of a solution is one of the most common tricks used by programmers and in coding competitions. It's called **Target Run Time Analysis**. Modern computers perform about $10^8$ (100 million) operations per second in a single thread. Knowing that the maximum allowed execution time for an algorithm is usually 1 or 2 seconds, you can look at the maximum input size ($n$) and immediately understand the maximum complexity you can afford.
+Estimating the efficiency of a solution is one of the most common tricks used by programmers and in coding competitions. It's called **Target Run Time Analysis**. Modern computers perform about $10^8$ (100 million) operations per second in a single thread. Knowing that the maximum allowed execution time for an algorithm is usually **_1 or 2 seconds_**, you can look at the maximum input size ($n$) and immediately understand the maximum complexity you can afford.
 
 | Input Size ($n$) | Maximum Allowable Complexity | Typical Algorithms / Approaches |
 | :--- | :--- | :--- |
@@ -38,5 +39,69 @@ Estimating the efficiency of a solution is one of the most common tricks used by
 | **$n > 10^8$** | $O(\log n)$ or $O(1)$ | Binary Search, direct mathematical formulas, Bitwise operations |
 
 Therefore, looking at the input size you can instantly determine which solutions are worth considering.
+
+> **note**: this table is created considering the TLE of 1 second. If we consider a bigger Time Constaint (2, 4, 10 seconds) the table would change slightly.
+
+### 1.3 How to Calculate no. of Operations, Time Constaint based on Complexity
+
+In the book _"Introduction to Algorithms"_ at page 15 there is this table:
+<figure style="text-align: center;">
+  <img src="imgs/1.png" alt="Centered Image" width="500">
+  <figcaption style="font-style: italic; color: gray; margin-top: 8px;">
+    Time Complexity on the left and Time Constaint above
+  </figcaption>
+</figure>
+
+The goals is:
+
+> for each function $f(n)$ and time $t$ in the table, determine the **largest size n** of a problem that _can be solved in time_ $t$, assuming that the algorithm to solve the problem takes $f(n)$ _microseconds_.
+
+Therefore, for each function we have to solve: $$f(n) \le t$$
+
+### First Step
+First of all, let's convert the time constaints in microseconds:
+- 1 second = $10^6\ \mu s$
+- 1 minute: $60 \times 10^6 = 6 \times 10^7\ \mu s$
+- 1 hour: $60 \times 60 \times 10^6 = 3.6 \times 10^9\ \mu s$
+- 1 day: $24 \times 3.6 \times 10^9 = 8.64 \times 10^{10}\ \mu s$
+- 1 month _(assuming 30 days)_: $30 \times 8.64 \times 10^{10} = 2.592 \times 10^{12}\ \mu s$
+- 1 year _(365 days)_: $365 \times 8.64 \times 10^{10} = 3.1536 \times 10^{13}\ \mu s$
+- 1 century: $100 \times 3.1536 \times 10^{13} = 3.1536 \times 10^{15}\ \mu s$
+
+### Second Step
+Now, for each function $f(n)$ we find a way to solve it:
+- For $\lg n$:\
+$\lg n = t \implies n = 2^t$
+- Per $\sqrt{n}$:\
+$\sqrt{n} = t \implies n = t^2$
+- Per $n$:\
+$n = t$
+- Per $n \lg n$:\
+$n \lg n = t$. This cannot be solved analytically in a simple way. You will need to use a numerical method (such as approximation or the bisection method) or a calculator to find the closest value of $n$ by trial and error.
+- Per $n^2$:\
+$n^2 = t \implies n = \lfloor\sqrt{t}\rfloor$
+- Per $n^3$:\
+$n^3 = t \implies n = \lfloor\sqrt[3]{t}\rfloor$
+- Per $2^n$:\
+$2^n = t \implies n = \lfloor\lg t\rfloor$
+- Per $n!$:\
+$n! = t$. Here too, we proceed by trial and error, incrementing $n$ (e.g. $1!, 2!, 3!...$) until the factorial exceeds the available time $t$.
+
+### Third Step (solution for 1 second)
+
+Now, we can use the $t$ value calculated in the first step and the $f(n)$ calculated in the second step to find the **maximum input size** $n$ that can be processed in **1 second** ($t = 10^6$ microseconds) for each running time function $f(n)$.
+
+| Function $f(n)$ | Resolution Formula | Calculation for 1 second ($t=10^6$) | Final Result (Maximum $n$) |
+| :--- | :--- | :--- | :--- |
+| $\lg n$ | $2^t$ | $2^{10^6}$ | $2^{1000000}$ |
+| $\sqrt{n}$ | $t^2$ | $(10^6)^2$ | $10^{12}$ |
+| $n$ | $t$ | $10^6$ | $10^6$ ($1,000,000$) |
+| $n \lg n$ | Numerical Approximation | $n \lg n = 10^6$ | $\approx 62,746$ |
+| $n^2$ | $\sqrt{t}$ | $\sqrt{10^6}$ | $1,000$ |
+| $n^3$ | $\sqrt[3]{t}$ | $\sqrt[3]{10^6}$ | $100$ |
+| $2^n$ | $\lg t$ | $\log_2(10^6)$ | $19$ |
+| $n!$ | Trial and Error | $9! \le 10^6 < 10!$ | $9$ |
+
+To find the solutions for the other time constaint we follow the same logic.
 
 ## 2. Next Topic
