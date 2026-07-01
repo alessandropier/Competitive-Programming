@@ -42,7 +42,7 @@ Knowing that the maximum allowed execution time for an algorithm is usually **_1
 
 Therefore, looking at the input size you can instantly determine which solutions are worth considering.
 
-> **note**: this table is created considering the TLE of 1 second. If we consider a bigger Time Constaint (2, 4, 10 seconds) the table would change slightly. This could be used as a guide when solving problems and need to be adjusted based on how big $n$ is and the time constraint.
+> **note**: this table is created considering the time constraint of 1 second. If we consider a bigger Time Constaint (2, 4, 10 seconds) the table would change slightly. This could be used as a guide when solving problems and need to be adjusted based on how big $n$ is and the time constraint.
 
 ### 1.3 How to Calculate no. of Elements based on Time Constaint and Complexity
 
