@@ -15,5 +15,6 @@ This page serves as the main reference point to navigate through my solutions. E
 | Problem Name | Platform | Tags | Difficulty |
 | :---: | :---: | :---: | :---: |
 | **[Bigsomma](olinfo/bigsomma%20(fast%20input)/)** | Training Olinfo | `Extreme Optimization` | 🔴 4/5 |
+| **[natoabc](olinfo/natoabc/)** | Training Olinfo | `no tags` | 🟢 1/5 |
 
 ---

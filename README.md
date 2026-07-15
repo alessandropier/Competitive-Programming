@@ -7,7 +7,8 @@ Welcome to my personal competitive programming repository. This space serves as 
 The repository is organized into the following sections:
 
 ```
-├── library/              
+├── library/     
+│   ├── books            # Useful books: CP's handbooks by Antti Laaksonen     
 │   └── README.md        # Theoretical notes, study, and implementations on the following concepts:
 │                           general-cpp/      # Notes on STDL, cpp Compiler, Code, etc.
 │                           strings/          # Notes on Strings, Chars, etc.
@@ -59,6 +60,9 @@ This directory contains my accepted solutions to various problems.
 7. CodeChef
 8. QOJ
 9. [CSAcademy](https://csacademy.com/contest/archive) **_(old mirrors + useful teaching resourses)_**
+10. Advent Of Code 
+
+others: CTF practice [here](https://github.com/Sharishth/ctf-practice)
 
 ## 🏅 Contests
 
