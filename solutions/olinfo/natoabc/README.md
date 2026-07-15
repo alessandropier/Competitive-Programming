@@ -48,7 +48,10 @@ in_buf[bytes_read] = '\0'; // places the '\0' at the end
 
 // 2: dictionaries for alph and lengths of the words
 const char* alph[26] = {
-"alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf", "hotel", "india", "juliett", "kilo", "lima", "mike", "november", "oscar", "papa",  "quebec", "romeo", "sierra", "tango", "uniform", "victor", "whiskey", "xray", "yankee", "zulu"
+"alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf", 
+"hotel", "india", "juliett", "kilo", "lima", "mike", "november", 
+"oscar", "papa",  "quebec", "romeo", "sierra", "tango", "uniform", 
+"victor", "whiskey", "xray", "yankee", "zulu"
 };
 
 // 3: array w lengths of words in "alph"
