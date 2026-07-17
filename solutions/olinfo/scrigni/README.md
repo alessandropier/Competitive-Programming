@@ -54,7 +54,9 @@ Summing all the singular averages $\frac{n-1}{2}$ is the equivalent of summing e
 
 $$ \sum_{i=1}^{n} \frac{(n-i)}{2} $$
 
-which could be rewrote as: $$\frac{1}{2} \sum_{i=1}^{n} (n-i)$$
+which could be rewrote as: 
+
+$$\frac{1}{2} \sum_{i=1}^{n} (n-i)$$
 
 ### 3. Final Formula:
 The last summation could be solved in $O(1)$ using the Gauss's Method:
