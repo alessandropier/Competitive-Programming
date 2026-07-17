@@ -3,11 +3,12 @@
     - 1.1 [list of notations](#11-list-of-notations)
     - 1.2 [choosing the approach based on input size](#12-choosing-the-approach-based-on-input-size)
     - 1.3 [how to calculate no. of elements based on time constaint and complexity](#13-how-to-calculate-no-of-elements-based-on-time-constaint-and-complexity)
-2. [Next Topic](#2-next-topic)
+2. [Math](#2-math)
+    - 2.1 [Gauss Summation Method](#21-gauss-summation-method)
 
 ---
 
-## 1. Big O Notation
+# 1. Big O Notation
 **Big O notation** is a mathematical way to describe how an algorithm’s performance _(usually time used)_ scales as the input size grows. It ignores exact execution times or hardware differences, focusing instead on the upper bound of the growth rate to help developers write scalable code.
 
 ### 1.1 List of Notations:
@@ -107,4 +108,59 @@ To find the solutions for the other time constaint we follow the same logic.
 
 > **note**: the big O notation is a theoretical way to figure how a solution behaves as $n$ grows. It is not meant to determine precisely the time a solution will need to complete, nor the precise size of $n$.
 
-## 2. Next Topic
+# 2. Math
+
+This section is dedicated to mathematical foundations, algorithms, and theorems essential for problem-solving and competitive programming. Inside, you will find core concepts in number theory, combinatorics, and arithmetic designed to optimize algorithms and handle complex calculations efficiently.
+
+> *Note: Some concepts might be missing, and some topics may include external references or links to books and other learning resources.*
+
+## 2.1 Gauss Summation Method
+
+The **Gauss Summation Method** (or *Gauss's Method*) is a formula used to quickly find the sum of the first $n$ consecutive positive integers. 
+
+Instead of adding every number individually ($1 + 2 + 3 + ... + n$), this method pairs numbers from opposite ends of the sequence to create constant sums.
+
+### The Formula
+
+The sum $S$ of the first $n$ numbers is calculated as:
+
+$$S = \frac{n(n + 1)}{2}$$
+
+Where:
+* **$S$** is the total sum.
+* **$n$** is the last number in the sequence.
+
+### C++ Code
+```cpp
+int main() 
+{
+    long long n;
+    in >> n;
+
+    // Gauss Summation formula: O(1) time complexity
+    long long risultato = (n * (n + 1)) / 2;
+}
+```
+
+
+### How It Works
+
+Imagine summing the numbers from 1 to 100. If you pair the first and last numbers, then the second and second-to-last, you notice a pattern:
+* $1 + 100 = 101$
+* $2 + 99 = 101$
+* $3 + 98 = 101$
+
+Since there are $100$ numbers, you will have exactly $50$ pairs ($n / 2$). 
+
+### Calculation Example:
+$$\text{Sum} = 50 \times 101 = 5050$$
+
+Using the formula directly:
+$$S = \frac{100 \times (100 + 1)}{2} = \frac{10100}{2} = 5050$$
+
+### Applications
+* **Algorithm Optimization:** Reduces time complexity from $O(n)$ to $O(1)$.
+* **Arithmetic Progressions:** Forms the foundation for summing any linear sequence.
+* **[scrigni](../solutions/olinfo/scrigni)** problem
+
+## 2.2 Next Topic
