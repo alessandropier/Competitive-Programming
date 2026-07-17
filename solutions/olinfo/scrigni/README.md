@@ -36,7 +36,7 @@ In this specific scenario, William got shocked **2 times**.
 The average of each chest pick is the average between the **best scenario** and the **worst scenario**. 
 
 1. **Best Scenario**: gets 0 electric shocks
-2. **Worst Scenario**: gets all the electric shocks, which is $n-1$, $n$ being the number of closed chests
+2. **Worst Scenario**: gets all the possible electric shocks, which is $n-1$, $n$ being the number of closed chests
 
 Therefore, the average number of electric shocks for each chest pick is: $\frac{0+(n-1)}{2} = \frac{n-1}{2}$
 
@@ -50,7 +50,9 @@ Let's consider $4$ chests:
 
 Therefore, summing all the averages, the result is: $1.5 + 1 + 0.5 + 0 = 3$
 
-Summing all the singular averages $\frac{n-1}{2}$ is the equivalent of summing every number from $1$ to $n-1$ and dividing it by $2$: $$ \sum_{i=1}^{n} \frac{(n-i)}{2} $$
+Summing all the singular averages $\frac{n-1}{2}$ is the equivalent of summing every number from $1$ to $n-1$ and dividing it by $2$: 
+
+$$ \sum_{i=1}^{n} \frac{(n-i)}{2} $$
 
 which could be rewrote as: $$\frac{1}{2} \sum_{i=1}^{n} (n-i)$$
 
