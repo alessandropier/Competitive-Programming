@@ -4,7 +4,11 @@
     - 1.2 [choosing the approach based on input size](#12-choosing-the-approach-based-on-input-size)
     - 1.3 [how to calculate no. of elements based on time constaint and complexity](#13-how-to-calculate-no-of-elements-based-on-time-constaint-and-complexity)
 2. [Math](#2-math)
-    - 2.1 [Gauss Summation Method](#21-gauss-summation-method)
+    - 2.1 [Algebra & Series](#21-algebra--series)
+        - [Gauss Summation Method](#211-gauss-summation-method)
+    - 2.2 [Number Theory](#22-number-theory)
+        - [Divisor Search and Prime Numbers (The Square Root Theorem)](#221-divisor-search-and-prime-numbers-the-square-root-theorem)
+        - Modular Arithmetic, GCD and LCD
 
 ---
 
@@ -114,7 +118,9 @@ This section is dedicated to mathematical foundations, algorithms, and theorems 
 
 > *Note: Some concepts might be missing, and some topics may include external references or links to books and other learning resources.*
 
-## 2.1 Gauss Summation Method
+## 2.1 Algebra & Series
+---
+## 2.1.1 Gauss Summation Method
 
 The **Gauss Summation Method** (or *Gauss's Method*) is a formula used to quickly find the sum of the first $n$ consecutive positive integers. 
 
@@ -163,4 +169,69 @@ $$S = \frac{100 \times (100 + 1)}{2} = \frac{10100}{2} = 5050$$
 * **Arithmetic Progressions:** Forms the foundation for summing any linear sequence.
 * **[scrigni](../solutions/olinfo/scrigni)** problem
 
-## 2.2 Next Topic
+## 2.2 Number Theory
+---
+
+## 2.2.1 Divisor Search and Prime Numbers (The Square Root Theorem)
+
+One of the most common mistakes is iterating up to $N$ to find the divisors of a number. There is a mathematical theorem that allows us to stop much earlier: at the **square root** of $N$.
+
+### The Mathematical Property:
+
+**Theorem:** If an integer $N > 1$ is composite _(not prime)_, then it must have at least one prime divisor $p$ such that $p \leq \sqrt{N}$.
+
+### Why is this true?
+Suppose $N$ is a composite number, so $N = a \times b$.
+*   If we assume that **both** $a > \sqrt{N}$ and $b > \sqrt{N}$, then their product $a \times b$ will necessarily be greater than $\sqrt{N} \times \sqrt{N} = N$.
+*   To avoid this contradiction, at least one of the two factors ($a$ or $b$) must necessarily be $\leq \sqrt{N}$.
+
+### The Symmetry of Divisors:
+Divisors always come in **pairs**. If $i$ is a divisor of $N$, then $N / i$ is also a divisor.
+
+*   **Example:** For $N = 36$, the divisors are: $(1, 36), (2, 18), (3, 12), (4, 9), (6, 6)$.
+*   **The Meeting Point:** Notice how the pairs "meet" at the square root ($6 \times 6 = 36$).
+
+If you continue searching beyond $\sqrt{N}$, you are simply finding the same pairs in reverse order (e.g., finding $12$ after you have already found $3$ because $12 * 3 = 3 * 12$). Therefore, once you reach the square root, you have already discovered all unique factors of the number, making further iteration redundant.
+
+## Why is it faster?
+
+Without this optimization, the Time Complexity would be **$O(N)$**.
+Using the square root, the complexity drops to **$O(\sqrt{N})$**.
+
+| $N$ | Standard Loops $O(N)$ | Loops Optimized Max Worst Case $O(\sqrt{N})$ |
+| :--- | :--- | :--- |
+| 100 | 100 | 10 |
+| 1,000,000 | 1,000,000 | 1,000 |
+| 1,000,000,000 | 1,000,000,000 | 31,622 |
+
+> **note**: since in code the value of **n** is divided by 2-3-5-etc, the code is even more efficient because $\sqrt{N}$ gets smaller as $N$ gets smaller.
+
+## Implementation Example (C++)
+
+Here is how to apply the property to factorize a number efficiently:
+
+```cpp
+void factorize(int n) {
+    // 1. Separate handling for the factor 2
+    while (n % 2 == 0) {
+        cout << 2 << " ";
+        n /= 2;
+    }
+
+    // 2. Check for odd factors up to sqrt(n)
+    // We use i * i <= n instead of i <= sqrt(n) to avoid float calculations
+    for (int i = 3; i * i <= n; i += 2) {
+        while (n % i == 0) {
+            cout << i << " ";
+            n /= i;
+        }
+    }
+
+    // 3. If n is still > 1, the remaining value is prime
+    if (n > 1) {
+        cout << n << " ";
+    }
+}
+```
+
+## 2.3 Next Topic
