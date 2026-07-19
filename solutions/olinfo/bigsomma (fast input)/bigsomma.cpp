@@ -33,9 +33,9 @@ long long somma(FILE *f)
 	// consuming the '\n'
 	ptr++;
     
-	long long totale = 0;
+	long long tot = 0;
 	int val;
-	int segno;
+	int sign;
 	
 	// 3. PARSING CYCLE OF NUMBERS + SUM and SIGN HANDLING
 	do
@@ -48,7 +48,7 @@ long long somma(FILE *f)
 
 			// Shift the remaining unread characters to the very beginning of the buffer
 			for(int i = 0; i < rimasti_in_buf; i++)
-				in_buf[i] = ptr[i];
+				in_buf[i] = ptr[i]; // it is the same as *(ptr + i)
 			
 			// Single RAM read to fill ONLY the remaining unused part of the 64 KB buffer
 			size = fread(in_buf + rimasti_in_buf, 1, BUFFER_SIZE - rimasti_in_buf, f); // reading the buffer
@@ -57,14 +57,14 @@ long long somma(FILE *f)
 			ptr = in_buf;
 			end_ptr = in_buf + size; // Update the boundary pointer
 			
-			if(size == 0) return totale; // EOF reached
+			if(size == 0) return tot; // EOF reached
 		}
 		
 		// Negative numbers handling
-		segno = 1;
+		sign = 1;
 		if(*ptr == '-')
 		{
-			segno = -1;
+			sign = -1;
 			
 			ptr++;
 		}
@@ -80,7 +80,7 @@ long long somma(FILE *f)
 		}
 		
 		// Apply the sign and accumulate the result into the total
-		totale += (long long)val * segno;
+		tot += (long long)val * sign;
 		
 		// Skip the whitespace to get to the next number
 		ptr++;
@@ -90,5 +90,5 @@ long long somma(FILE *f)
 	}
 	while(N > 0);
 	
-	return totale;
+	return tot;
 }

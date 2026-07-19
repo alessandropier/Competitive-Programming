@@ -155,8 +155,11 @@ Imagine summing the numbers from 1 to 100. If you pair the first and last number
 * $1 + 100 = 101$
 * $2 + 99 = 101$
 * $3 + 98 = 101$
+* $...$
+* $...$
+* $100 + 1 = 101$
 
-Since there are $100$ numbers, you will have exactly $50$ pairs ($n / 2$). 
+Since there are $100$ numbers, you will have exactly $50$ pairs ($n / 2$). It could also be proven by induction.
 
 ### Calculation Example:
 $$\text{Sum} = 50 \times 101 = 5050$$

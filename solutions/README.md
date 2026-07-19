@@ -7,7 +7,7 @@ This page serves as the main reference point to navigate through my solutions. E
 > **note**: this list _does not_ include every single problem I have completed; rather, it is a curated collection of significant problems. This may include everything from foundational exercises that are essential for building basics, to more complex challenges that introduced interesting patterns, or simply instructive in their approach.
 
 ### Legend
-**🟢 1/5 Easy | 🟠 2/5 Intermediate | 🟡 3/5 Medium | 🔴 4/5 Hard | 🟣 5/5 Expert**
+**🟢 1/5 Easy | 🟡 2/5 Intermediate | 🟠 3/5 Advanced | 🔴 4/5 Hard | 🟣 5/5 Expert**
 
 
 ## List of Problems
@@ -15,7 +15,7 @@ This page serves as the main reference point to navigate through my solutions. E
 | Problem Name | Platform | Tags | Difficulty |
 | :---: | :---: | :---: | :---: |
 | **[Bigsomma](olinfo/bigsomma%20(fast%20input)/)** | Training Olinfo | `Extreme Optimization` | 🔴 4/5 |
-| **[natoabc](olinfo/natoabc/)** | Training Olinfo | `no tags` | 🟢 1/5 |
+| **[natoabc](olinfo/natoabc/)** | Training Olinfo | `no tags` | 🟡 2/5 |
 | **[scrigni](olinfo/scrigni/)** | Training Olinfo | `Math` | 🟢 1/5 |
 
 ---
