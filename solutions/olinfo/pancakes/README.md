@@ -52,14 +52,14 @@ void sieve(int n)
 ### 2. Scoring Function (`score`): 
 Calculates the score of a single label by summing all the criteria listed above.
 
-### 3. Variant Exploration (`what_label`): 
-**For each label**, the function analyzes all possible configurations obtained by modifying a **single digit** (up to roughly _54 combinations_). Any option where the most significant digit becomes zero is discarded.
+### 3. CORE - Variant Exploration (`what_label`): 
+**For each label**, the function analyzes all possible configurations obtained by modifying a **single digit** (up to _54 combinations_). Any option where the most significant digit becomes zero is discarded.
 
 #### 3.1 Why 54 Combinations?
-Since the value constraint is $1 ≤ Li ≤ 999'999$ there are at maximum $54$ possible outcomes:
-- $9$ for each digit, $9*5 = 45$ _(except the most significant digit that can't be $0$)_
+Since the **label value** constraint is $1 ≤ Li ≤ 999'999$ there are at maximum $54$ possible outcomes:
+- $9$ for each digit _(except the most significant digit that cannot be $0$)_
 - $8$ for the most significant digit _(zero is excluded)_
-- the current label number
+- the current label number _(when the label is not changed)_
 
 For a total of $9*5 + 8 + 1 = 54$
 
@@ -70,9 +70,26 @@ To check all the variants efficiently, the function uses a combination of **math
   * **`original_digit`**: The **current digit** being modified.
   * **`right_side`**: The digits to the **right** of the **current one**.
 
+```cpp
+int temp = label;
+int divider = 1;
+...
+int original_digit = temp % 10;
+int left_side = label / (divider * 10);
+int right_side = label % divider;
+...
+...
+divider *= 10;
+```
+
 * **Substitution Loop**: A nested `for` loop **replaces** the **current digit** with **every value** from $0$ to $9$. Two safety conditions skip invalid or redundant cases:
   * If `left_side == 0` and `new_digit == 0`, it **prevents leading zeros**.
   * If `new_digit == original_digit`, it **skips unchanged digits**.
+
+```cpp
+if (left_side == 0 && new_digit == 0)
+    continue;
+```
 
 * **Score Maximization**: The new label is reconstructed mathematically (`new_label`) and its score is evaluated. Then `final_label` is updated whenever a higher score is found.
 
