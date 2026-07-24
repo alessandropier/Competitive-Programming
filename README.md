@@ -68,17 +68,17 @@ others: CTF practice [here](https://github.com/Sharishth/ctf-practice)
 
 1. Codeforces **_(check the blog often because people share news about contests)_**\
 1.1 LeetCode, AtCoder, CodeChef **_(weekly / daily)_**
-2. Facebook Hacker Cup (**IMPORTANT**)
-3. ICPC **_(IMPORTANT - for Universities)_**
+2. Facebook Hacker Cup (**important**)
+3. ICPC **_(important - for Universities only)_**
 4. Croatian Open Competition in Informatics **_(mirror)_**
 5. OIS - OII **_(Italy)_** / IOIS - IOI **_(international)_** **_(mirror)_**
-6. [QOJ](https://qoj.ac/) **_(mirrors of old competitions and is the engine for multiple contests such as the "Universal Cup")_**
-7. Yandex Algorithm (**IMPORTANT**)
-8. [Universal Cup](https://ucup.ac/) **_(IMPORTANT - for groups only - has a discord channel where people look for a team and have discussions)_**
+6. [QOJ](https://qoj.ac/) **_(mirrors of old competitions - the engine for multiple contests such as the "Universal Cup")_**
+7. Yandex Algorithm (**important**)
+8. [Universal Cup](https://ucup.ac/) **_(important - for groups only - has a discord channel where people look for a team and have discussions)_**
 
 [Here](https://cphof.org/contests) is an updated list of the **past** contests all over the world.\
 List of the **upcoming** contests all over the world:
-1. [CLIST](https://clist.by/) _(might be helpful to sign-up here and list all your nicknames so every win shows next to your nick)_
+1. [CLIST](https://clist.by/)
 2. [CP Calendar](https://competitiveprogramming.info/calendar)
 
 ## 🔗 Resources

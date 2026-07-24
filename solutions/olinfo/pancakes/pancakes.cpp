@@ -109,7 +109,7 @@ int what_label(int label)
 
         // changing the current digit with every other digits (from 0 to 9)
         // changing each digit once
-        for (int new_digit = 0; new_digit <= 9; ++new_digit) 
+        for (int new_digit = 0; new_digit <= 9; new_digit++) 
 		{
             
             // 1. The most significant digit can't be 0
