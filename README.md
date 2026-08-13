@@ -88,14 +88,16 @@ Given the extensive knowledge and high-quality resources already available onlin
 Here are some useful resourses: _(** used for very high level material)_
 
 1. CP-Algorithms (good reference for theory) [here](https://cp-algorithms.com/)
-2. ** USACO guide: https://usaco.guide/, specifically [here](https://usaco.guide/general/usaco-faq?lang=cpp#q-what-topics-do-i-need-to-know-for-each-of-the-usaco-divisions) in which there are topics for every level with in depth explanations
+2. Learn Cpp [here](https://www.learncpp.com/#google_vignette): very good guide to understand C++ at fullest. Some more advaced topics (such as multithreading) are not explained here though.
+3. ** USACO guide: https://usaco.guide/, specifically [here](https://usaco.guide/general/usaco-faq?lang=cpp#q-what-topics-do-i-need-to-know-for-each-of-the-usaco-divisions) in which there are topics for every level with in depth explanations
 
-3. ** Colin Galen "Topic Streams" YouTube Playlist [here](https://www.youtube.com/playlist?list=PLDjGkpToBsYCaRoQ-_S5MRxYMuKgHD62w): very in depth explanation of multiple topics _(along with his other videos)_
-4. Errichto "Edu" YouTube Playlist [here](https://www.youtube.com/playlist?list=PLl0KD3g-oDOEbtmoKT5UWZ-0_JbyLnHPZ): quick videos (around 20 min each) about multiple topics
-5. ** Olimpiadi Italiane di Informatica YouTube Playlist [here](https://www.youtube.com/watch?v=8sr5Of-Bb1s&list=PLO4y9a8lTpK1voZwy4xkhFX3_y1GRDO8p): every topic explained in Italian by qualified teachers
+4. ** Colin Galen "Topic Streams" YouTube Playlist [here](https://www.youtube.com/playlist?list=PLDjGkpToBsYCaRoQ-_S5MRxYMuKgHD62w): very in depth explanation of multiple topics _(along with his other videos)_
+5. Errichto "Edu" YouTube Playlist [here](https://www.youtube.com/playlist?list=PLl0KD3g-oDOEbtmoKT5UWZ-0_JbyLnHPZ): quick videos (around 20 min each) about multiple topics
+6. ** Olimpiadi Italiane di Informatica YouTube Playlist [here](https://www.youtube.com/watch?v=8sr5Of-Bb1s&list=PLO4y9a8lTpK1voZwy4xkhFX3_y1GRDO8p): every topic explained in Italian by qualified teachers
+7. ** The Cherno YouTube channel [here](https://www.youtube.com/@thecherno): ex developer for Electronic Arts that decided to teach C++ and many other things on his YT channel
 
-6. ACM-ICPC-Preparation GitHub repo [here](https://github.com/BedirT/ACM-ICPC-Preparation): contains every topic from basic level to expert along with resources, youtube videos, web pages etc.
-7. ACM-ICPC-Algorithms GitHub repo [here](https://github.com/matthewsamuel95/ACM-ICPC-Algorithms): a lot of topics with **code implementation**
+8. ACM-ICPC-Preparation GitHub repo [here](https://github.com/BedirT/ACM-ICPC-Preparation): contains every topic from basic level to expert along with resources, youtube videos, web pages etc.
+9. ACM-ICPC-Algorithms GitHub repo [here](https://github.com/matthewsamuel95/ACM-ICPC-Algorithms): a lot of topics with **code implementation**
 
 ## 👦 Author
 **Alessandro Piergiovanni**\

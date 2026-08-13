@@ -61,18 +61,18 @@ int score(int label)
 		else if(digit == 7)
 			points += D7;
 			
-		// 3d - summing
+		// 3rd - summing
 		sum_digits += digit;
 		
 		// 4th - multiplying
 		prod_digits *= digit;
 	}
 	
-	// 3rd - continue
+	// 3rd
 	if(is_prime[sum_digits])
 		points += sum_digits;
 		
-	// 4rd - continue
+	// 4th
 	if(is_prime[prod_digits])
 		points += prod_digits;
 	
