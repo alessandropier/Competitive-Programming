@@ -17,7 +17,7 @@ This page serves as the main reference point to navigate through my solutions. E
 | **[Bigsomma](olinfo/bigsomma%20(fast%20input)/)** | Training Olinfo | `Extreme Optimization` | 🔴 4/5 |
 | **[natoabc](olinfo/natoabc/)** | Training Olinfo | `no tags` | 🟡 2/5 |
 | **[pancakes](olinfo/pancakes/)** | Training Olinfo | `no tags` | 🟡 2/5 |
-| **[Rubabandiera V2](olinfo/Rubabandiera%20V2/)** | Training Olinfo | `Math`, `Bit Manipulation` | 🟡 2/5 |
+| **[Rubabandiera V2](olinfo/Rubabandiera%20v2/)** | Training Olinfo | `Math`, `Bit Manipulation` | 🟡 2/5 |
 | **[scrigni](olinfo/scrigni/)** | Training Olinfo | `Math` | 🟢 1/5 |
 
 ---
