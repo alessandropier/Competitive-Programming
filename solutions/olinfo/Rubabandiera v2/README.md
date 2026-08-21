@@ -101,7 +101,7 @@ After that, $L$ is calculated by doing $N - exp$ and the final formula is $2 * L
 
 Since it is a simple math formula, it could be implemented by using **bit manipulation** as well. 
 
-To do so, this idea is used: _if $2^a$ is removed from $N$ we are left with $L$; therefore, we can calculate the winner_. How do we remove the biggest power of $2$ from $N$? We consider the **binary representation** of the number of players $N$ and find the **MSB** (*most significant bit*).
+To do so, this idea is used: _if_ $2^a$ _is removed from_ $N$ _we are left with_ $L$; _therefore, we can calculate the winner_. How do we remove the biggest power of_ $2$ _from_ $N$? _We consider the **binary representation** of the number of players_ $N$ _and find the **MSB** (*most significant bit*)._
 
 **Example with** $N = 7$ <br>
 if $N = 7$, in binary is $00000111$ and the MSB is in position $2$. To subtract that number ($2^2 = 4$) from $N = 7$, we turn off that bit. Now it becomes $L = 00000011 = 3$. 
@@ -125,7 +125,7 @@ long long solve(long long N)
 where:
 1. The first instruction calculates the position of the MSB. $63$ is the number of possible positions of a **long long** variable and **__builtin_clzll** is a function that calculates the number of **leading zeros** of a long long. If these $2$ values are subtracted, we get the position of the MSB.
 
-2. The second instruction creates a **long long** number that has a $1$ **only** in the position of the MSB $(1LL << index)$. After that, a $NOT$ operation is performed to get the opposite: everything is equal to $1$ except the MSB. Lastly, the resulting number is bitwise $ANDed$ with the initial number of players $N$. As a result,  _everything remains the same except the MSB that becomes $0$ because of the $AND$ operation_.
+2. The second instruction creates a **long long** number that has a $1$ **only** in the position of the MSB $(1LL << index)$. After that, a $NOT$ operation is performed to get the opposite: everything is equal to $1$ except the MSB. Lastly, the resulting number is bitwise $ANDed$ with the initial number of players $N$. As a result,  _everything remains the same except the MSB that becomes $0$ because of the_ $AND$ _operation_.
 
 3. The last instruction is a multiplication by $2$ $(N << 1)$ and then we sum $1$ by doing $OR$ $1$. This **always** sums $1$ because the number is always **even** because it has been multiplied by $2$; therefore, the last bit is always $0$.
 
