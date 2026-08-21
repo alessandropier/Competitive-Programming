@@ -1,4 +1,4 @@
-# Rubabandiera V2
+# Rubabandiera v2
 
 _Link to the Training Olinfo problem [here](https://training.olinfo.it/task/ctf)._\
 _Source code_:
