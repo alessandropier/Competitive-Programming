@@ -103,6 +103,6 @@ Here are some useful resourses: _(** used for very high level material)_
 **Alessandro Piergiovanni**\
 _Computer Science graduate and Forbes Top Graduate_
 
-e-mail: alessandropiergiovanni001@gmail.com
+e-mail: alessandropiergiovanni.info@gmail.com
 
 [![linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/alessandropiergiovanni001/) [![github](https://skillicons.dev/icons?i=github)](https://www.github.com/alessandropier)
