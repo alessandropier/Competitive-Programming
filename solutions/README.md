@@ -18,5 +18,6 @@ This page serves as the main reference point to navigate through my solutions. E
 | **[natoabc](olinfo/natoabc/)** | Training Olinfo | `no tags` | 🟡 2/5 |
 | **[pancakes](olinfo/pancakes/)** | Training Olinfo | `no tags` | 🟡 2/5 |
 | **[scrigni](olinfo/scrigni/)** | Training Olinfo | `Math` | 🟢 1/5 |
+| **[Rubabandiera V2](olinfo/rubabandiera%20V2/)** | Training Olinfo | `Math`, `Bit Manipulation` | 🟡 2/5 |
 
 ---
